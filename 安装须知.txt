@@ -1,0 +1,20 @@
+按下win+R键，输入cmd，然后依次输入以下代码：
+
+更换为清华源：
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+查看目前的pip下载源：
+pip config get global.index-url
+*********************************************************
+
+店家搭建好环境后：
+1.请店家安装jupyter插件，并成功运行
+
+2.请在系统环境变量中修改PPNLP-HOME路径为E:\workspace
+
+3.在vscode中进行以下验证：
+from paddlenlp import Taskflow
+tag = Taskflow('pos_tagging', mode='accurate', batch_size=32)
+
+
+*****若成功运行，即能顺利使用SMS 3.1，且后续使用无需重复搭建环境*****
